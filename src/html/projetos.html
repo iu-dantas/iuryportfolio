@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iury Dantas - Projetos</title>
+    
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Conheça os projetos desenvolvidos por Iury Dantas, especialista em interfaces modernas e funcionais.">
+    <meta name="keywords" content="projetos web, portfólio, desenvolvimento frontend, UI, UX, design">
+    <meta name="author" content="Iury Dantas">
+    
+    <!-- Meta Tags para Social Media (OG: Open Graph) -->
+    <meta property="og:title" content="Iury Dantas - Projetos">
+    <meta property="og:description" content="Conheça meu trabalho em desenvolvimento web e design de interfaces.">
+    <meta property="og:image" content="../img/projetos-og-image.jpg">
+    <meta property="og:url" content="https://www.iurydev.com/projetos">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    
+    <!-- Preload das fontes críticas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome com SRI para segurança -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+          integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projetos.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo animate-fade-in">
+                <img src="../assets/img/marca/logo.png" alt="IuryDev Logo">
+                <h2>IuryDev</h2>
+            </div>
+            <nav>
+                <ul class="nav-links animate-fade-in">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="#" class="active">Projetos</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="cta-button header-cta animate-fade-in">Entrar em contato</a>
+            <button class="mobile-menu-toggle animate-fade-in" aria-label="Menu de navegação">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <div class="container">
+                <div class="projects-hero-content animate-slide-up">
+                    <h1>Meus <span class="highlight">Projetos</span></h1>
+                    <p>Confira uma seleção dos meus melhores trabalhos em design e desenvolvimento web.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-filter reveal">
+            <div class="container">
+                <div id="filtros-container" class="filter-buttons" role="tablist" aria-label="Filtro de projetos">
+                    <!-- Os filtros serão carregados dinamicamente -->
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-gallery">
+            <div class="container">
+                <div id="projetos-container" class="projects-grid">
+                    <!-- Os projetos serão carregados dinamicamente via JavaScript -->
+                    <div id="loading-container" class="loading-indicator animate-pulse">
+                        <div class="spinner"></div>
+                        <p>Carregando projetos...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Container para os modais que serão gerados dinamicamente -->
+        <div id="modais-container"></div>
+    </main>
+
+    <section class="cta-section reveal">
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <h2>Vamos trabalhar juntos no seu próximo projeto?</h2>
+                <p>Transforme sua visão em realidade com soluções digitais que se destacam.</p>
+                <a href="index.html#contact" class="cta-button">Iniciar um projeto <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links animate-fade-in">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">Sobre</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#services">Serviços</a>
+                <a href="#projects">Projetos</a>
+                <a href="index.html#contact">Contato</a>
+            </div>
+            <div class="footer-socials animate-fade-in delay-300">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="copyright animate-fade-in delay-600">© 2025 Iury Dantas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript - carregados na ordem correta -->
+    <script src="../js/main.js"></script>
+    <script src="../js/projetos.js"></script>
+    <script src="../js/modais-projetos.js"></script>
+    <script src="../js/scroll-animations.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,576 @@
+/* animations.css - Animações e correções responsivas */
+
+/* =================== */
+/* === ANIMAÇÕES ===== */
+/* =================== */
+
+/* Fade In */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Up */
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide In Left */
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide In Right */
+  @keyframes slideInRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Scale In */
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Bounce */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Pulse */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Shake */
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(5px);
+    }
+  }
+  
+  /* Classes de animação para elementos */
+  .animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease forwards;
+  }
+  
+  .animate-slide-left {
+    animation: slideInLeft 0.8s ease forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slideInRight 0.8s ease forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.8s ease forwards;
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s ease infinite;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s ease infinite;
+  }
+  
+  .animate-shake {
+    animation: shake 0.8s ease;
+  }
+  
+  /* Para animações com retardo */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+  .delay-900 { animation-delay: 900ms; }
+  .delay-1000 { animation-delay: 1000ms; }
+  
+  /* Classes para animações scroll-based */
+  .reveal {
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+  
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ========================= */
+  /* == CORREÇÕES DE LAYOUT == */
+  /* ========================= */
+  
+  /* Corrigir logo em mobile */
+  @media (max-width: 768px) {
+    .logo {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .logo img {
+      height: 32px;
+    }
+    
+    .logo h2 {
+      font-size: 1.4rem;
+    }
+    
+    /* Centralizar navegação mobile */
+    .nav-links.active {
+      text-align: center;
+      padding: 25px 0;
+    }
+    
+    .nav-links.active li {
+      margin: 15px 0;
+    }
+    
+    /* Corrigir seção hero para mobile */
+    .hero-content {
+      text-align: center;
+      padding-top: 20px;
+    }
+    
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-text p {
+      margin: 0 auto 1.5rem;
+      max-width: 100%;
+    }
+    
+    .hero-image {
+      margin: 0 auto 30px;
+    }
+    
+    .hashtag-container {
+      justify-content: center;
+      margin: 25px auto;
+    }
+    
+    /* Botão CTA centralizado em mobile */
+    .cta-button {
+      margin: 0 auto 1.5rem;
+    }
+    
+    /* Corrigir seção about para mobile */
+    .about-content {
+      text-align: center;
+    }
+    
+    .about-image {
+      width: 250px;
+      height: auto;
+      margin: 0 auto 30px;
+    }
+    
+    /* Corrigir skill icons para mobile */
+    .skill-icons {
+      justify-content: center;
+    }
+    
+    /* Centralizar serviços e projetos em mobile */
+    .service-card, .project-card {
+      text-align: center;
+      max-width: 300px;
+      margin: 0 auto 20px;
+    }
+    
+    /* Corrigir rodapé em mobile */
+    footer {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+  }
+  
+  /* Ajustar tamanho do carrossel em diferentes dispositivos */
+  @media (max-width: 992px) {
+    .carousel-inner .service-card,
+    .carousel-inner .project-card {
+      width: calc(50% - 20px);
+      min-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner .service-card,
+    .carousel-inner .project-card {
+      width: calc(100% - 20px);
+      min-width: calc(100% - 20px);
+    }
+    
+    .carousel-inner {
+      margin: 0 auto;
+    }
+    
+    /* Melhorar controles do carrossel em mobile */
+    .carousel-controls {
+      margin-top: 20px;
+      gap: 25px;
+    }
+    
+    .carousel-button {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  /* Melhorar responsividade do formulário de contato */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 0 10px;
+    }
+    
+    .form-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .submit-btn, .contact-btn {
+      width: 100%;
+      padding: 12px;
+      justify-content: center;
+    }
+  }
+  
+  /* Ajustes para modais em mobile */
+  @media (max-width: 768px) {
+    .modal-header h2 {
+      font-size: 1.4rem;
+    }
+    
+    .main-image {
+      height: 200px;
+    }
+    
+    .thumbnail-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .close-modal {
+      font-size: 24px;
+    }
+    
+    .project-modal .modal-container {
+      width: 95%;
+      max-height: 85vh;
+    }
+  }
+  
+  /* Fix para a modal em dispositivos muito pequenos */
+  @media (max-width: 375px) {
+    .modal-header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .thumbnail-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Melhorar shadow e feedback touch para todos os botões */
+  button, 
+  .cta-button,
+  .view-project-btn,
+  .filter-btn,
+  .submit-btn,
+  .contact-btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:active, 
+  .cta-button:active,
+  .view-project-btn:active,
+  .filter-btn:active,
+  .submit-btn:active,
+  .contact-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Melhoria de acessibilidade para foco em links e botões */
+  a:focus, button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+  }
+  
+  /* ====================== */
+  /* === MICRO ANIMAÇÕES == */
+  /* ====================== */
+  
+  /* Efeito hover suave em cards */
+  .service-card, .project-card {
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Animação para hashtags */
+  .hashtag-pill {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .hashtag-pill:hover {
+    transform: translateY(-5px) scale(1.05);
+  }
+  
+  /* Animação suave para indicadores */
+  .carrossel-indicador, .carousel-dot {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .carrossel-indicador:hover, .carousel-dot:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Efeito de zoom para imagens de projeto no hover */
+  .project-image img {
+    transition: transform 0.5s ease;
+  }
+  
+  .project-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Animar ícones de rede social */
+  .footer-socials a {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .footer-socials a:hover {
+    transform: translateY(-7px) rotate(5deg);
+  }
+  
+  /* Animar ícones de skills */
+  .skill-icon {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .skill-icon:hover {
+    transform: translateY(-8px) scale(1.1);
+  }
+
+  /* Animação de banner deslizante para hashtags */
+
+/* Container principal modificado para o efeito marquee */
+.hashtag-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 25px 0;
+    padding: 10px 0;
+  }
+  
+  /* Animação para movimento lateral contínuo */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Container interno que vai deslizar */
+  .hashtag-slider {
+    display: flex;
+    gap: 12px;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+    padding-right: 12px; /* Espaço entre o final e começo do slider */
+  }
+  
+  /* Container duplicado para criar efeito contínuo */
+  .hashtag-slider-duplicate {
+    display: flex;
+    gap: 12px;
+    animation: marquee 20s linear infinite;
+    animation-delay: -10s; /* Começa na metade da animação */
+    white-space: nowrap;
+    padding-right: 12px;
+  }
+  
+  /* Estilo das hashtags dentro do slider */
+  .hashtag-slider .hashtag-pill,
+  .hashtag-slider-duplicate .hashtag-pill {
+    flex-shrink: 0; /* Impede que as hashtags encolham */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Pausa a animação quando o mouse estiver sobre o container */
+  .hashtag-container:hover .hashtag-slider,
+  .hashtag-container:hover .hashtag-slider-duplicate {
+    animation-play-state: paused;
+  }
+  
+  /* Efeito hover nas hashtags */
+  .hashtag-pill:hover {
+    transform: translateY(-5px) scale(1.1);
+    z-index: 10;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .hashtag-slider,
+    .hashtag-slider-duplicate {
+      animation-duration: 15s; /* Movimento mais rápido em telas menores */
+    }
+    
+    .hashtag-slider-duplicate {
+      animation-delay: -7.5s;
+    }
+  }
+  
+  /* Para dispositivos muito pequenos */
+  @media (max-width: 375px) {
+    .hashtag-pill {
+      padding: 5px 12px;
+      font-size: 0.8rem;
+    }
+    
+    .hashtag-slider,
+    .hashtag-slider-duplicate {
+      animation-duration: 12s; /* Ainda mais rápido */
+    }
+    
+    .hashtag-slider-duplicate {
+      animation-delay: -6s;
+    }
+  }
+
+  /* Adicione este CSS ao arquivo animations.css */
+
+/* Fixar altura do contêiner do título da hero para evitar realocação de elementos */
+.hero-text h1 {
+  min-height: 120px; /* Ajuste este valor conforme a altura necessária para o seu texto completo */
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Para telas menores, ajustar a altura mínima */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    min-height: 150px; /* Ajuste para mobile onde pode haver mais quebras de linha */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    min-height: 180px; /* Ainda maior para telas muito pequenas */
+  }
+}
+
+/* Estilo para o cursor de digitação */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--secondary-color);
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,1982 @@
+/* Reset e Estilos Gerais */
+:root {
+  --primary-color: #191919;
+  --secondary-color: #DDFF00;
+  --accent-color: #FFF;
+  --text-color: #E0E0E0;
+  --card-bg: #252525;
+  --hover-color: #3a3a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Utility Classes */
+.highlight {
+  color: var(--secondary-color);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 12.8rem;
+  position: relative;
+  font-weight: 600;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* Header e Navegação */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(25, 25, 25, 0.95);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.cta-button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  width: fit-content;
+  margin-bottom: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c8e600;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(221, 255, 0, 0.2);
+}
+
+.header-cta {
+  position: relative;
+  top: 20px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.feature-boxes {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.feature-box {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="10" height="10" fill="%23eee" fill-opacity="0.2"/><rect x="10" y="10" width="10" height="10" fill="%23eee" fill-opacity="0.2"/><rect x="10" y="0" width="10" height="10" fill="%23fff" fill-opacity="0.2"/><rect x="0" y="10" width="10" height="10" fill="%23fff" fill-opacity="0.2"/></svg>');
+  border-radius: 15px;
+}
+
+.feature-box.large {
+  width: 322px;
+  height: 220px;
+}
+
+.feature-box.small {
+  width: 186px;
+  height: 220px;
+}
+
+.feature-box img {
+  border-radius: 15px;
+}
+
+.hero-image {
+  overflow: hidden;
+  max-width: 370px;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image img {
+  height: 320px;
+}
+
+.profile-avatar {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(25, 25, 25, 0.9);
+  padding: 5px 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+  width: 100%;
+  border: 3px solid var(--secondary-color);
+  box-sizing: border-box;
+}
+
+.profile-info h3 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.profile-info p {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.social-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.social-dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.hashtag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hashtag-pill {
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hashtag-pill:hover {
+  transform: translateY(-5px);
+}
+
+/* Hashtag pill variants */
+.hashtag-pill.white {
+  background-color: #f5f5f5;
+  color: #2d2d2d;
+}
+
+.hashtag-pill.green {
+  background-color: #d2d789;
+  color: #2d2d2d;
+}
+
+.hashtag-pill.darkgray {
+  background-color: #ff7300;
+  color: #f5f5f5;
+}
+
+.hashtag-pill.darkblue {
+  background-color: #0080ff;
+  color: #f5f5f5;
+}
+
+/* About Section */
+.about {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image {
+  width: 382px;
+  height: 405px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.about-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 2rem 0;
+}
+
+.skill-icon {
+  background-color: var(--card-bg);
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: translateY(-5px);
+  background-color: var(--secondary-color);
+  color: #000;
+}
+
+.skill-icon i {
+  font-size: 1.5rem;
+}
+
+/* Skills Section */
+.skills p {
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* Card Styles - Services & Projects */
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 calc(33.333% - 20px);
+  width: calc(33.333% - 20px);
+  min-width: calc(33.333% - 20px);
+  cursor: pointer;
+
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.service-card p {
+  margin-bottom: 20px;
+}
+
+.service-card a {
+  color: var(--secondary-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 10; /* Garantir que o link fique sobre o card */
+}
+
+/* Estilos para as modais de serviços */
+
+/* Estilos gerais para modais de serviço */
+.service-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.service-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Container do modal */
+.service-modal .modal-container {
+  background-color: var(--card-bg);
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
+}
+
+.service-modal.active .modal-container {
+  transform: translateY(0);
+}
+
+/* Cabeçalho do modal */
+.service-modal .modal-header {
+  padding: 24px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: var(--card-bg);
+  z-index: 10;
+}
+
+.service-modal .modal-header h2 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-modal .modal-header h2 i {
+  font-size: 1.4rem;
+}
+
+.service-modal .close-modal {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.service-modal .close-modal:hover {
+  color: var(--secondary-color);
+  transform: rotate(90deg);
+}
+
+/* Conteúdo do modal */
+.service-modal .modal-content {
+  padding: 24px;
+  color: var(--text-color);
+}
+
+/* Visão geral do serviço - grid layout */
+.service-modal .service-overview {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Seção de descrição */
+.service-modal .service-description {
+  padding-right: 20px;
+}
+
+.service-modal .service-description h3 {
+  color: var(--secondary-color);
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.service-modal .service-description h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.service-modal .service-description p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Box de preços */
+.service-modal .pricing-box {
+  background-color: rgba(221, 255, 0, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid rgba(221, 255, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.service-modal .pricing-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgba(221, 255, 0, 0.15);
+}
+
+.service-modal .pricing-box h4 {
+  color: var(--text-color);
+  margin: 0 0 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.service-modal .pricing-box .price {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-modal .time-estimate {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.service-modal .service-cta {
+  margin: 0 auto;
+}
+
+/* Detalhes do serviço */
+.service-modal .service-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.service-modal .features-section h3,
+.service-modal .includes-section h3 {
+  color: var(--secondary-color);
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.service-modal .features-section h3::after,
+.service-modal .includes-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+/* Listas de características e inclusos */
+.service-modal .features-list,
+.service-modal .includes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-modal .features-list li,
+.service-modal .includes-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.service-modal .features-list li i,
+.service-modal .includes-list li i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.service-modal .includes-list li i {
+  font-size: 0.9rem;
+}
+
+
+
+
+/* Estilos para o Carrossel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+/* Controles do carrossel */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.carousel-button {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.carousel-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.carousel-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--secondary-color);
+  transform: scale(1.2);
+}
+
+/* Services Section */
+.services-grid {
+  display: block;
+}
+
+.services-cta {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.services-cta a {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Projetos Section */
+.projects-intro {
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+/* Estilos para cards de projeto com overlay */
+.project-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.333% - 20px);
+  width: calc(33.333% - 20px);
+  min-width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.projects-carousel .carousel-inner {
+  display: flex;
+  gap: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  background-color: #333;
+  flex-shrink: 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0; /* substitui top/left/width/height com segurança */
+  background: rgba(25, 25, 25, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none; /* evita bloqueio de clique acidental */
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.view-project-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.project-card:hover .view-project-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.view-project-btn:hover {
+  background-color: #c8e600;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(221, 255, 0, 0.3);
+}
+
+.project-info {
+  padding: 24px;
+  background-color: var(--card-bg);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  margin: 0 0 12px;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-info h3 {
+  color: #c8e600;
+}
+
+.project-info p {
+  margin: 0 0 15px;
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project-tag {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-tag {
+  background-color: rgba(221, 255, 0, 0.1);
+  color: var(--secondary-color);
+}
+
+.projects-carousel .carousel-inner {
+  display: flex;
+  gap: 20px;
+}
+
+.project-modal {
+  display: none; /* Modal oculto inicialmente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-modal.active {
+  display: flex; /* Modal visível quando a classe active é adicionada */
+}
+
+.modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.projects-cta {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.projects-cta a {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Estilos para o modal de projeto */
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.project-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  background-color: var(--card-bg);
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
+}
+
+.project-modal.active .modal-container {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 24px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: var(--card-bg);
+  z-index: 10;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+  color: var(--secondary-color);
+  transform: rotate(90deg);
+}
+
+.modal-content {
+  padding: 24px;
+  color: var(--text-color);
+}
+
+.project-gallery {
+  margin-bottom: 35px;
+}
+
+.main-image {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.main-image img:hover {
+  transform: scale(1.03);
+}
+
+.thumbnail-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.thumbnail-gallery img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-gallery img:hover {
+  opacity: 0.8;
+  transform: translateY(-3px);
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.details-section h3 {
+  color: var(--secondary-color);
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.details-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.details-section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.tech-stack li {
+  background-color: var(--hover-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.tech-stack li:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.result-item {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.result-item:hover {
+  background-color: rgba(221, 255, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.result-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.result-label {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.project-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-cta .cta-button {
+  margin-bottom: 0;
+}
+
+/* Estilos para o indicador de carregamento */
+.projects-carousel .loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+.projects-carousel .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(221, 255, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--secondary-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 15px;
+}
+
+.projects-carousel .loading-container p {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Estilos para a data do projeto no carrossel */
+.project-info .project-date {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Atualização do grid de projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project-date {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Estilo específico para o carrossel */
+.carrossel-info .project-date {
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para data nos cards de projetos na página de projetos */
+.project-info .project-date {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+/* See More Cards */
+.project-card.see-more {
+  background-color: rgba(37, 37, 37, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px dashed rgba(221, 255, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 40px 20px;
+}
+
+.project-card.see-more:hover {
+  border-color: var(--secondary-color);
+  background-color: rgba(221, 255, 0, 0.05);
+  transform: translateY(-8px);
+}
+
+.see-more-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.see-more-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+/* Contato Section */
+.contact {
+  background-color: var(--card-bg);
+  padding: 4rem 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.contact-title h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-buttons {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #c8e600;
+  transform: translateY(-2px);
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Desktop médio (até 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+  
+  /* Ajustes modais de serviço */
+  .service-modal .modal-container {
+    width: 90%;
+    max-width: 900px;
+  }
+}
+
+/* Tablets e Desktops pequenos (até 992px) */
+@media (max-width: 992px) {
+  /* Layout Home */
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+    margin: 0 auto 2rem;
+  }
+
+  .feature-boxes {
+    justify-content: center;
+  }
+
+  .cta-button {
+    margin: 0 auto 2.5rem;
+  }
+
+  /* Cards de Serviços e Projetos */
+  .service-card {
+    flex: 0 0 calc(50% - 20px);
+    width: calc(50% - 20px);
+    min-width: calc(50% - 20px);
+  }
+  
+  .project-card {
+    flex: 0 0 calc(50% - 20px);
+    width: calc(50% - 20px);
+    min-width: calc(50% - 20px);
+    margin-right: 0;
+  }
+
+  /* Modais de Projetos */
+  .project-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-image {
+    height: 300px;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Modais de Serviço */
+  .service-modal .modal-container {
+    width: 95%;
+    max-width: 800px;
+  }
+  
+  .service-modal .service-overview {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  
+  .service-modal .modal-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablets menores e smartphones grandes (até 768px) */
+@media (max-width: 768px) {
+  /* Layout e Textos */
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+  
+  .profile-info {
+    align-items: center;
+  }
+
+  .hashtag-container {
+    justify-content: center;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text,
+  .service-card p,
+  .project-info,
+  .contact-text {
+    text-align: left;
+  }
+  
+  /* Feature Boxes */
+  .feature-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-box.large, 
+  .feature-box.small {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Navegação */
+  .nav-links, 
+  .cta-button.header-cta {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Títulos e Formulários */
+  .section-title {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-buttons {
+    grid-column: span 1;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submit-btn {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Cards em tela cheia */
+  .service-card,
+  .project-card {
+    flex: 0 0 calc(100% - 20px);
+    width: calc(100% - 20px);
+    min-width: calc(100% - 20px);
+    margin-right: 0;
+  }
+  
+  /* Carrossel */
+  .carousel-inner {
+    gap: 15px;
+  }
+  
+  /* Modais */
+  .modal-container {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  /* Modal de Serviço */
+  .service-modal .modal-container {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .service-modal .service-overview {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-modal .service-description {
+    padding-right: 0;
+  }
+  
+  .service-modal .pricing-box {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .service-modal .service-details {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .service-modal .modal-header {
+    padding: 20px;
+  }
+  
+  .service-modal .modal-content {
+    padding: 20px;
+  }
+  
+  .service-modal .modal-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Menu Mobile Expandido */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* Tablets (específicos) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Navegação e Filtros */
+  .filter-buttons {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  
+  /* Imagens e Galerias */
+  .project-image {
+    height: 200px;
+  }
+  
+  .thumbnail-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .thumbnail-gallery img {
+    height: 80px;
+  }
+  
+  /* Carrossel e Modais */
+  .carousel-inner {
+    gap: 15px;
+  }
+  
+  .main-image {
+    height: 350px;
+  }
+}
+
+/* Orientação landscape em tablets */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .project-card {
+    min-height: 300px;
+  }
+  
+  .project-image {
+    height: 150px;
+  }
+  
+  .modal-container {
+    max-height: 85vh;
+  }
+  
+  .project-details {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Modal de serviço em landscape */
+  .service-modal .modal-container {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .service-modal .modal-header {
+    padding: 10px 16px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .service-modal .service-overview {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .service-modal .service-details {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .service-modal .modal-content {
+    padding: 12px 16px;
+  }
+  
+  .service-modal .pricing-box {
+    padding: 15px;
+  }
+}
+
+/* Smartphones (até 576px) */
+@media (max-width: 576px) {
+  /* Textos */
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  /* Elementos específicos */
+  .hashtag-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .hashtag-pill {
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+  }
+  
+  .skill-icons {
+    gap: 10px;
+  }
+  
+  .skill-icon {
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Modal de Projeto */
+  .project-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .thumbnail-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .thumbnail-gallery img {
+    height: 60px;
+  }
+  
+  /* Modal de Serviço */
+  .service-modal .modal-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  
+  .service-modal .modal-header {
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+  }
+  
+  .service-modal .modal-content {
+    padding: 16px;
+  }
+  
+  .service-modal .modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .service-modal .close-modal {
+    font-size: 24px;
+  }
+  
+  .service-modal .service-description h3,
+  .service-modal .features-section h3,
+  .service-modal .includes-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .service-modal .pricing-box {
+    padding: 20px 15px;
+  }
+  
+  .service-modal .pricing-box .price {
+    font-size: 1.6rem;
+  }
+  
+  /* Modo tela cheia em smartphones */
+  .service-modal.active {
+    overflow: hidden;
+  }
+  
+  .service-modal.active .modal-container {
+    transform: translateY(0);
+    border-radius: 0;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+
+/* Smartphones pequenos (até 400px) */
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .about-text p,
+  .skills p {
+    font-size: 0.9rem;
+  }
+  
+  .skill-icon {
+    font-size: 1.6rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Modal de Serviço */
+  .service-modal .modal-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .service-modal .service-description h3,
+  .service-modal .features-section h3,
+  .service-modal .includes-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .service-modal .pricing-box .price {
+    font-size: 1.4rem;
+  }
+  
+  .service-modal .pricing-box h4 {
+    font-size: 1.1rem;
+  }
+  
+  .service-modal .time-estimate {
+    font-size: 0.85rem;
+  }
+  
+  .service-modal .service-description p {
+    font-size: 0.95rem;
+  }
+  
+  .service-modal .features-list li,
+  .service-modal .includes-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPad Mini (específico) */
+@media only screen and (device-width: 768px) {
+  .project-card {
+    height: auto;
+    min-height: 320px;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+}
+
+/* Acessibilidade: Modo de contraste alto */
+@media (prefers-contrast: high) {
+  .service-modal .modal-header h2,
+  .service-modal .service-description h3,
+  .service-modal .features-section h3,
+  .service-modal .includes-section h3,
+  .service-modal .pricing-box .price {
+    color: #ffffff;
+  }
+  
+  .service-modal .pricing-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Animações de modo reduzido */
+@media (prefers-reduced-motion: reduce) {
+  /* Remove animações do site inteiro */
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  /* Remove animações dos modais de serviço */
+  .service-modal,
+  .service-modal .modal-container,
+  .service-modal .pricing-box,
+  .service-modal .close-modal {
+    transition: none !important;
+  }
+  
+  .service-modal.active .modal-container {
+    transform: none !important;
+  }
+  
+  /* Remove todos os efeitos de hover */
+  .service-modal .pricing-box:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Suporte para navegador Safari */
+@supports (-webkit-touch-callout: none) {
+  .service-modal .modal-container {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-buttons {
+    -webkit-overflow-scrolling: touch;
+  }
+}

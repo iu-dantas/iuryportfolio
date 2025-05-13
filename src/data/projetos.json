@@ -1,0 +1,254 @@
+[
+  {
+    "id": "alma-da-mata",
+    "titulo": "Alma da Mata — Folclore Brasileiro",
+    "categoria": "web",
+    "descricao": "Site dedicado ao resgate e divulgação do folclore brasileiro, com destaque para lendas regionais como Iara, Saci-Pererê, Curupira e outras figuras míticas das matas e rios do Brasil.",
+    "imagem": "../assets/img/projetos/alma-da-mata/thumb1.png",
+    "destaque": true,
+    "dataCriacao": "2025-05-11T14:30:00",
+    "detalhes": {
+      "imagemPrincipal": "../assets/img/projetos/alma-da-mata/thumb1.png",
+      "imagens": [
+        "../assets/img/projetos/alma-da-mata/thumb2.png",
+        "../assets/img/projetos/alma-da-mata/thumb3.png",
+        "../assets/img/projetos/alma-da-mata/thumb4.png"
+      ],
+      "descricao": "Desenvolvimento de um site sobre o universo mágico do folclore brasileiro. Com design leve e atmosférico, o projeto busca aproximar crianças e adultos das lendas populares por meio de narrativas envolventes, ilustrações encantadoras e uma navegação intuitiva e educativa.",
+      "tecnologias": [
+        "HTML5", "CSS3", "JavaScript", "Bootstrap"
+      ],
+      "desafios": "Criar uma identidade visual que transmitisse o clima místico das lendas brasileiras, mantendo a simplicidade e acessibilidade necessárias para um público variado. Integrar as histórias de forma organizada e atrativa, incentivando a leitura e o aprendizado sobre o nosso folclore.",
+      "resultados": [
+        {
+          "numero": "+2000",
+          "descricao": "Páginas visitadas mensalmente"
+        },
+        {
+          "numero": "4.8★",
+          "descricao": "Avaliação média nas redes sociais"
+        },
+        {
+          "numero": "+50",
+          "descricao": "Lendas catalogadas e contadas até o momento"
+        },
+        {
+          "numero": "100%",
+          "descricao": "Responsivo e otimizado para mobile"
+        }
+      ],
+      "urlDemo": "https://almadamata.iurydev.com",
+      "urlRepositorio": ""
+    }
+  },
+  {
+    "id": "nutri-vitoria",
+    "titulo": "Site da Nutricionista Vitória Ribeiro",
+    "categoria": "landing",
+    "descricao": "Website profissional para nutricionista clínica e funcional com foco em atendimento personalizado.",
+    "imagem": "../assets/img/projetos/nutri/nutri-thumb1.png",
+    "destaque": true,
+    "dataCriacao": "2025-05-01T10:15:00",
+    "detalhes": {
+      "imagemPrincipal": "../assets/img/projetos/nutri/nutri-thumb1.png",
+      "imagens": [
+        "../assets/img/projetos/nutri/nutri-thumb2.png",
+        "../assets/img/projetos/nutri/nutri-thumb3.png",
+        "../assets/img/projetos/nutri/nutri-thumb4.png"
+      ],
+      "descricao": "Desenvolvimento de um site institucional com identidade visual leve e acolhedora para a nutricionista Vitória Ribeiro. O projeto priorizou navegação simples, destaque para os atendimentos online e agendamento direto via WhatsApp.",
+      "tecnologias": [
+        "HTML5", "CSS3", "JavaScript", "WordPress", "Elementor"
+      ],
+      "desafios": "Traduzir a marca pessoal da nutricionista em um layout que transmitisse profissionalismo e empatia, além de integrar recursos como blog e formulário de contato eficaz.",
+      "resultados": [
+        {
+          "numero": "+60%",
+          "descricao": "Aumento nos agendamentos online"
+        },
+        {
+          "numero": "4.9★",
+          "descricao": "Avaliação média dos pacientes"
+        },
+        {
+          "numero": "+1500",
+          "descricao": "Visitantes mensais no blog"
+        },
+        {
+          "numero": "100%",
+          "descricao": "Responsivo e otimizado para mobile"
+        }
+      ],
+      "urlDemo": "https://nutrivitoriaribeiro.com",
+      "urlRepositorio": ""
+    }
+  },
+  {
+    "id": "linkbento",
+    "titulo": "LinkBento — Portfólio de Iury Dantas",
+    "categoria": "web",
+    "descricao": "Plataforma de links, com design minimalista moderno estilo Bento-Box.",
+    "imagem": "../assets/img/projetos/linkbento/linkbento-thumb1.png",
+    "destaque": true,
+    "dataCriacao": "2024-12-28T10:15:00",
+    "detalhes": {
+      "imagemPrincipal": "../assets/img/projetos/linkbento/linkbento-thumb1.png",
+      "imagens": [
+        "../assets/img/projetos/linkbento/linkbento-thumb2.png",
+        "../assets/img/projetos/linkbento/linkbento-thumb3.png",
+        "../assets/img/projetos/linkbento/linkbento-thumb4.png"
+      ],
+      "descricao": "Desenvolvimento de um site de portfólio e área de links personalizável, ideal para designers, desenvolvedores e criativos que buscam reunir suas redes, trabalhos e contatos em uma única página. O projeto conta com interface limpa, navegação intuitiva, modo escuro e responsividade total para uso em dispositivos móveis.",
+      "tecnologias": [
+        "HTML5", "CSS3", "JavaScript", "React", "Styled Components"
+      ],
+      "desafios": "Criar uma interface elegante e prática ao mesmo tempo, permitindo fácil personalização por parte do usuário. Implementar recursos como tema claro/escuro automático, carregamento rápido e compatibilidade entre navegadores e dispositivos.",
+      "resultados": [
+        {
+          "numero": "+1000",
+          "descricao": "Usuários ativos utilizando a plataforma"
+        },
+        {
+          "numero": "4.9★",
+          "descricao": "Avaliação média nas redes sociais e feedback dos usuários"
+        },
+        {
+          "numero": "5s",
+          "descricao": "Tempo médio de carregamento da página"
+        },
+        {
+          "numero": "100%",
+          "descricao": "Responsivo e otimizado para mobile"
+        }
+      ],
+      "urlDemo": "https://linkbento.iurydev.com",
+      "urlRepositorio": ""
+    }
+  },
+  {
+    "id": "delivery",
+    "titulo": "Site de Delivery",
+    "categoria": "web",
+    "descricao": "Design e desenvolvimento para site de delivery local",
+    "imagem": "../assets/img/projetos/delivery/delivery-principal.png",
+    "destaque": true,
+    "dataCriacao": "2025-03-25T16:45:00",
+    "detalhes": {
+      "imagemPrincipal": "../assets/img/projetos/delivery/delivery-principal.png",
+      "imagens": [
+        "../assets/img/projetos/delivery/pizza-thumb1.png",
+        "../assets/img/projetos/delivery/pizza-thumb2.png",
+        "../assets/img/projetos/delivery/pizza-thumb3.png"
+      ],
+      "descricao": "Desenvolvimento de plataforma completa para serviço de delivery local, integrando sistema de pedidos, pagamento online e rastreamento de entrega em tempo real. O projeto foi desenvolvido com foco na experiência móvel, permitindo que usuários façam pedidos rapidamente.",
+      "tecnologias": [
+        "HTML5", "CSS3", "JavaScript", "React", "Node.js", "MongoDB", "API de Pagamento", "Geolocalização"
+      ],
+      "desafios": "O principal desafio foi criar uma experiência de usuário fluida mesmo em conexões lentas de internet. Implementamos carregamento progressivo e otimização de imagens para garantir que o site funcionasse bem em qualquer dispositivo.",
+      "resultados": [
+        {
+          "numero": "+45%",
+          "descricao": "Aumento nas vendas online"
+        },
+        {
+          "numero": "3 min",
+          "descricao": "Tempo médio para finalizar pedido"
+        },
+        {
+          "numero": "+2500",
+          "descricao": "Usuários ativos mensais"
+        },
+        {
+          "numero": "-20%",
+          "descricao": "Redução em custos operacionais"
+        }
+      ],
+      "urlDemo": "https://exemplo.com/delivery-demo",
+      "urlRepositorio": "https://github.com/iurydev/delivery-project"
+    }
+  },
+  {
+    "id": "ecommerce-moda",
+    "titulo": "E-commerce de Moda",
+    "categoria": "ecommerce",
+    "descricao": "Loja virtual completa para marca de roupas com integração de pagamentos",
+    "imagem": "../assets/img/projetos/ecommerce/ecommerce-thumb1.png",
+    "destaque": true,
+    "dataCriacao": "2025-04-10T09:30:00",
+    "detalhes": {
+      "imagemPrincipal": "../assets/img/projetos/ecommerce/ecommerce-thumb1.png",
+      "imagens": [
+        "../assets/img/projetos/ecommerce/ecommerce-thumb2.png",
+        "../assets/img/projetos/ecommerce/ecommerce-thumb3.png",
+        "../assets/img/projetos/ecommerce/ecommerce-thumb4.png"
+      ],
+      "descricao": "Desenvolvimento de e-commerce completo para marca de moda jovem, com foco em experiência de compra simplificada e design moderno. O projeto incluiu catálogo de produtos, sistema de recomendações personalizadas, integração com métodos de pagamento variados e painel administrativo para gestão de estoque e pedidos.",
+      "tecnologias": [
+        "React", "NextJS", "Styled Components", "Node.js", "MongoDB", "AWS", "Stripe", "Firebase"
+      ],
+      "desafios": "Criar uma experiência de compra rápida e intuitiva, com carregamento otimizado de imagens e opções de personalização de produtos. Implementar um sistema robusto de gerenciamento de estoque e pedidos que fosse fácil de usar pela equipe da loja.",
+      "resultados": [
+        {
+          "numero": "+70%",
+          "descricao": "Aumento na taxa de conversão"
+        },
+        {
+          "numero": "-40%",
+          "descricao": "Redução na taxa de abandono de carrinho"
+        },
+        {
+          "numero": "+3500",
+          "descricao": "Novos clientes nos primeiros 3 meses"
+        },
+        {
+          "numero": "1.2s",
+          "descricao": "Tempo médio de carregamento das páginas"
+        }
+      ],
+      "urlDemo": "https://moda-ecommerce-demo.iurydev.com",
+      "urlRepositorio": "https://github.com/iurydev/moda-ecommerce"
+    }
+  },
+  {
+    "id": "app-gestao-financeira",
+    "titulo": "Aplicativo de Gestão Financeira",
+    "categoria": "app",
+    "descricao": "App para controle de finanças pessoais com visualização de dados e metas",
+    "imagem": "../assets/img/projetos/finance/finance-thumb1.png",
+    "destaque": true,
+    "dataCriacao": "2025-02-15T13:45:00",
+    "detalhes": {
+      "imagemPrincipal": "../assets/img/projetos/finance/finance-thumb1.png",
+      "imagens": [
+        "../assets/img/projetos/finance/finance-thumb2.png",
+        "../assets/img/projetos/finance/finance-thumb3.png",
+        "../assets/img/projetos/finance/finance-thumb4.png"
+      ],
+      "descricao": "Desenvolvimento de aplicativo para gestão de finanças pessoais, com interface intuitiva e recursos avançados de visualização de dados. O aplicativo permite o cadastro de receitas e despesas, categorização automática, estabelecimento de metas de economia, geração de relatórios detalhados e previsões baseadas em histórico.",
+      "tecnologias": [
+        "React Native", "TypeScript", "Redux", "Firebase", "D3.js", "API de Bancos"
+      ],
+      "desafios": "Desenvolver algoritmos de categorização automática de transações e criar visualizações de dados que tornassem informações financeiras complexas facilmente compreensíveis. Garantir a segurança e privacidade dos dados financeiros dos usuários.",
+      "resultados": [
+        {
+          "numero": "+10k",
+          "descricao": "Downloads nos primeiros dois meses"
+        },
+        {
+          "numero": "4.8★",
+          "descricao": "Avaliação média nas lojas de aplicativos"
+        },
+        {
+          "numero": "87%",
+          "descricao": "Taxa de retenção após 30 dias"
+        },
+        {
+          "numero": "32%",
+          "descricao": "Aumento médio na economia dos usuários"
+        }
+      ],
+      "urlDemo": "https://financeapp-demo.iurydev.com",
+      "urlRepositorio": "https://github.com/iurydev/finance-app"
+    }
+  }
+]
